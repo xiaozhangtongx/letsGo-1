@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.letsgo.mapper.SysUserRoleMapper">
+    <select id="getDictListById" resultType="java.lang.String">
+        SELECT sr.role_dict
+        FROM sys_user_role sur
+                 join sys_role sr on sur.role_id = sr.id
+        where user_id = ${id}
+    </select>
+
+    <select id="getIdListById" resultType="java.lang.Integer">
+        SELECT sr.id
+        FROM sys_user_role sur
+                 join sys_role sr on sur.role_id = sr.id
+        where user_id = ${id}
+    </select>
+</mapper>
