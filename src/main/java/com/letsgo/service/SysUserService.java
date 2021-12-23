@@ -21,4 +21,5 @@ public interface SysUserService extends IService<SysUser> {
   void saveIdentity(SysUser sysUser) throws GlobalException;
   List<SysUser> myPageSelectList(Page<SysUser> page, SysUser user);
 
+
 }
